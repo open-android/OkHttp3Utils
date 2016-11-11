@@ -55,7 +55,7 @@ compile 'com.github.itcastsh:OkHttp3Utils:0.0.2'
            addParam("参数名称", "参数");
 
          // WSCallBack<Bean> 中的数据类型必须给，如果只想要JSON,传入String即可
-        heiMaHttp.get("BASE_URL", new WSCallBack<Bean>() {
+        heiMaHttp.post("BASE_URL", new WSCallBack<Bean>() {
             @Override
             public void onFailure(Call call, Exception e) {
                //失败
