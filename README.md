@@ -29,7 +29,26 @@ compile 'com.github.itcastsh:OkHttp3Utils:0.0.2'
 ```
 
 
-####get/Post Bean类型异步请求（内部使用Gson解析json数据）
+####GET请求（内部使用Gson解析json数据）
+```
+        ItHeiMaHttp heiMaHttp = ItHeiMaHttp.getInstance().
+           addParam("参数名称", "参数").
+           addParam("参数名称", "参数");
+
+         // WSCallBack<Bean> 中的数据类型必须给，如果只想要JSON,传入String即可
+        heiMaHttp.get("BASE_URL", new WSCallBack<Bean>() {
+            @Override
+            public void onFailure(Call call, Exception e) {
+               //失败
+            }
+
+            @Override
+            public void onSuccess(Bean bean) {
+                 //成功， 自己想要的Bean
+            }
+        });
+```
+####POST请求（内部使用Gson解析json数据）
 ```
         ItHeiMaHttp heiMaHttp = ItHeiMaHttp.getInstance().
            addParam("参数名称", "参数").
