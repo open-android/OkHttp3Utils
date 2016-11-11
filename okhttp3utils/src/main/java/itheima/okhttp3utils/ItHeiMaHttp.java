@@ -55,7 +55,8 @@ public class ItHeiMaHttp {
 
     public static ItHeiMaHttp httpManager;
 
-    public static ItHeiMaHttp getHttpManager() {
+
+    public static ItHeiMaHttp getInstance() {
         if (httpManager == null) {
             synchronized (ItHeiMaHttp.class) {
                 httpManager = new ItHeiMaHttp();
