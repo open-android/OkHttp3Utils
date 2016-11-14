@@ -28,6 +28,7 @@ public class ItHeiMaHttp {
 
     private final OkHttpClient okHttpClient;
     private Map<String, String> params = null;
+    private Map<String, String> heads = null;
 
     private Gson gson;
     private final Handler handler;
@@ -40,6 +41,7 @@ public class ItHeiMaHttp {
         gson = new Gson();
         handler = new Handler(Looper.myLooper());
         this.params = new HashMap<String, String>();
+        this.heads=new HashMap<String, String>();
     }
 
 
@@ -52,6 +54,18 @@ public class ItHeiMaHttp {
         this.params.put(new String(key), value);
         return this;
     }
+
+    public Map<String, String> getHeads() {
+        return heads;
+    }
+
+
+    public ItHeiMaHttp addHeads(String key, String value) {
+        this.heads.put(new String(key), value);
+        return this;
+    }
+
+
 
     public static ItHeiMaHttp httpManager;
 
@@ -74,6 +88,8 @@ public class ItHeiMaHttp {
         doRequest(request, bcb);
     }
 
+
+
     private Request buildRequest(String url, RequestType type) {
         Request.Builder builder = new Request.Builder();
         if (type == RequestType.GET) {
@@ -84,7 +100,16 @@ public class ItHeiMaHttp {
             builder.post(requestBody);
         }
         builder.url(url);
+        addAllHeads(builder);
         return builder.build();
+    }
+
+    private void addAllHeads(Request.Builder builder) {
+        if (heads.size()>0){
+            for (Map.Entry<String, String> entry : heads.entrySet()) {
+                 builder.addHeader(entry.getKey(),entry.getValue());
+            }
+        }
     }
 
 
