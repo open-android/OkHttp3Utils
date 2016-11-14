@@ -33,6 +33,6 @@ public abstract class WSCallBack<T> {
 
     public abstract void onFailure(Call call,  Exception e)  ;
 
-    public abstract void onSuccess( T t);
+    public abstract void onSuccess(T t);
 
 }
