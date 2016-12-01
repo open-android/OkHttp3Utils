@@ -13,6 +13,7 @@ allprojects {
         maven { url "https://jitpack.io" }
     }
 }
+
 ```
 ![image](jitpack.png)
 
