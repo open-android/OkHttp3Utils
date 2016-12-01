@@ -17,6 +17,7 @@ allprojects {
 ```
 ![image](jitpack.png)
 
+
 在build.gradle添加依赖
 ```
 compile 'com.github.open-android:OkHttp3Utils:0.0.4'
