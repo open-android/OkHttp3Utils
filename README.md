@@ -19,7 +19,7 @@ allprojects {
 
 在build.gradle添加依赖
 ```
-compile 'com.github.itcastsh:OkHttp3Utils:0.0.3'
+compile 'com.github.open-android:OkHttp3Utils:0.0.4'
 ```
 
 ####需要的权限
