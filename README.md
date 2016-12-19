@@ -83,9 +83,6 @@ heiMaHttp.addHead("key","value")
 .addHead("key","value");
 
 ```
-###交流群
-```
-334700525
-```
+
 
 [回到顶部](#readme)
