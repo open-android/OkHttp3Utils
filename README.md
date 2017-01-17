@@ -6,6 +6,11 @@ OkHttp3.0封装框架，内部使用gson解析json数据
 
 简书：[http://www.jianshu.com/p/e9258c1bc5ce](http://www.jianshu.com/p/e9258c1bc5ce "OKHttp3.0")
 
+* 更多干货请下载app
+
+
+![黑马助手.png](http://upload-images.jianshu.io/upload_images/4037105-f777f1214328dcc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ## 使用步骤
 ### 1. 在project的build.gradle添加如下代码(如下图)
